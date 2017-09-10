@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>CLF-tool</title>
+
+		
+
+<style>
+
+/**
+ * Demo Styles
+ */
+/* Sortable tables */
+table.sortable thead {
+    background-color:#eee;
+    color:#666666;
+    font-weight: bold;
+    cursor: default;
+}
+html {
+  height: 100%;
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  position: relative;
+  margin: 0;
+  padding-bottom: 6rem;
+  min-height: 100%;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+}
+
+.demo {
+  margin: 0 auto;
+  padding-top: 10px;
+  max-width: 1024px;
+  width: 94%;
+}
+
+.demo h1 {
+  margin-top: 0;
+}
+
+/**
+ * Footer Styles
+ */
+
+.footer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  background-color: #efefef;
+  text-align: center;
+}
+</style>
+
+<!-- jQuery -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Metis Menu Plugin JavaScript -->
+    <script src="vendor/metisMenu/metisMenu.min.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="dist/js/sb-admin-2.js"></script>
+    <!-- Bootstrap Core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- MetisMenu CSS -->
+    <link href="vendor/metisMenu/metisMenu.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="dist/css/sb-admin-2.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#">CLF-tool</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li ><a href="dashboard.html">Home</a></li>
+        
+		<li class="dropdown active">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">Cost Optimizaton <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="LowUtilizedInstances.html">Low Utilized instances</a></li>
+            <li><a href="Underutilized_EBS_Volume.html">underutilized EBS volume</a></li>
+             <li><a href="Unutiliaed_IP_addresses.html">Unutiliaed IP addresses</a></li>
+          </ul>
+       </li>
+	   
+	   <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">Security <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="Security_Groups_Specified_Ports.html">Security Groups Specified Ports</a></li>
+            <li><a href="IAM_use.html">IAM use</a></li>
+            <li><a href="s3_bucket_permission.html">s3 bucket permission</a></li>
+			<li><a href="Amazon_ublic_snapshot.html">Amazon ublic snapshot</a></li>
+          </ul>
+	   </li>
+	   
+	   
+	   <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">Performance<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="High_Utilization_Instances.html">High Utilization Instances</a></li>
+          </ul>
+	   </li>
+	   
+	   <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">Setting <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="User_management.html">User management</a></li>
+            <li><a href="SMTP.html">SMTP</a></li>
+            <li><a href="Schedular_Display.html">Schedular Display</a></li>
+			<li><a href="Amazon_cridentials.html">Amazon cridentials</a></li>
+          </ul>
+	   </li>
+	   
+        
+      
+	  </ul>
+
+	  
+	   
+        
+        
+    
+	  
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login Out</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="footer">
+	<!-- start: FOOTER -->
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12">
+				<ul class="nav nav-pills nav-justified">
+					<li><a href="#">© 2017-18 Government College Of Engineering, Karad [Saurabh,Hrishikesh,Vaibhav,Aishwarya(BE IT)]</a></li>
+
+				</ul>
+			</div>
+		</div>
+	</div>
+	<!-- end: FOOTER -->
+</div>
+
+
+</html>
