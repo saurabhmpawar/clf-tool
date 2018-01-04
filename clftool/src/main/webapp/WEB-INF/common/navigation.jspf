@@ -1,0 +1,72 @@
+<nav class="navbar navbar-default">
+	<div class="container-fluid">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle" data-toggle="collapse"
+				data-target="#myNavbar">
+				<span class="icon-bar"></span> <span class="icon-bar"></span> <span
+					class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" href="#">CLF-tool</a>
+		</div>
+		<div class="collapse navbar-collapse" id="myNavbar">
+			<ul class="nav navbar-nav">
+				<li><a href="dashboard.html">Home</a></li>
+
+				<li class="dropdown"><a class="dropdown-toggle"
+					data-toggle="dropdown" href="#">Cost Optimizaton <span
+						class="caret"></span></a>
+					<ul class="dropdown-menu">
+						<li><a href="LowUtilizedInstances.html">Low Utilized
+								instances</a></li>
+						<li><a href="Underutilized_EBS_Volume.html">underutilized
+								EBS volume</a></li>
+						<li><a href="Unutiliaed_IP_addresses.html">Unutiliaed IP
+								addresses</a></li>
+					</ul></li>
+
+				<li class="dropdown active"><a class="dropdown-toggle"
+					data-toggle="dropdown" href="#">Security <span class="caret"></span></a>
+					<ul class="dropdown-menu">
+						<li><a href="Security_Groups_Specified_Ports.html">Security
+								Groups Specified Ports</a></li>
+						<li><a href="IAM_use.html">IAM use</a></li>
+						<li><a href="s3_bucket_permission.html">s3 bucket
+								permission</a></li>
+						<li><a href="Amazon_ublic_snapshot.html">Amazon ublic
+								snapshot</a></li>
+					</ul></li>
+
+
+				<li class="dropdown"><a class="dropdown-toggle"
+					data-toggle="dropdown" href="#">Performance<span class="caret"></span></a>
+					<ul class="dropdown-menu">
+						<li><a href="High_Utilization_Instances.html">High
+								Utilization Instances</a></li>
+					</ul></li>
+
+				<li class="dropdown"><a class="dropdown-toggle"
+					data-toggle="dropdown" href="#">Setting <span class="caret"></span></a>
+					<ul class="dropdown-menu">
+						<li><a href="list-users.do">User management</a></li>
+						<li><a href="SMTP.html">SMTP</a></li>
+						<li><a href="Schedular_Display.html">Schedular Display</a></li>
+						<li><a href="Amazon_cridentials.html">Amazon cridentials</a></li>
+					</ul></li>
+
+
+
+			</ul>
+
+
+
+
+
+
+
+			<ul class="nav navbar-nav navbar-right">
+				<li><a href="#"><span class="glyphicon glyphicon-log-in"></span>
+						Login Out</a></li>
+			</ul>
+		</div>
+	</div>
+</nav>
