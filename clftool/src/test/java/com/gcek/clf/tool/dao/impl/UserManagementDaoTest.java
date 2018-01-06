@@ -10,7 +10,6 @@ import com.gcek.clf.tool.utility.BusinessException;
 
 public class UserManagementDaoTest {
 
-	
 	@Test
 	public void adduserTest() {
 		System.out.println("shree");
@@ -52,7 +51,7 @@ public class UserManagementDaoTest {
 			boolean b = u.isValidUser("saurabhpawar1396@gmail.com", "admin");
 
 			Assert.assertTrue(b);
-			
+
 		} catch (BusinessException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

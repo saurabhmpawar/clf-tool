@@ -12,7 +12,7 @@
 		<div>
 			<font color="green">${successMessage}</font>
 		</div>
-		
+
 		<div class="form-group">
 			<label for="inputEmail" class="control-label col-xs-2"> SMTP
 				url</label>

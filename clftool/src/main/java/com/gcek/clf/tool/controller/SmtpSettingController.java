@@ -1,7 +1,6 @@
 package com.gcek.clf.tool.controller;
 
 import java.io.IOException;
-import java.util.Date;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -14,7 +13,6 @@ import org.apache.log4j.Logger;
 import com.gcek.clf.tool.dao.SmtpSettingDao;
 import com.gcek.clf.tool.dao.impl.SmtpSettingDaoImpl;
 import com.gcek.clf.tool.model.SmtpSetting;
-import com.gcek.clf.tool.model.User;
 import com.gcek.clf.tool.utility.BusinessException;
 
 @WebServlet(urlPatterns = "/smtp-setting.do")

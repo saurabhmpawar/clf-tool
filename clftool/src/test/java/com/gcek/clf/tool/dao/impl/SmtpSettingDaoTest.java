@@ -15,7 +15,7 @@ public class SmtpSettingDaoTest {
 		
 		SmtpSetting s = new SmtpSetting("adc", "ava", "adsca", "avdsa", "avdss", "ds");
 		SmtpSettingDao dao = new SmtpSettingDaoImpl();
-		
+
 		try {
 			dao.createSmtpSetting(s);
 		} catch (BusinessException e) {
