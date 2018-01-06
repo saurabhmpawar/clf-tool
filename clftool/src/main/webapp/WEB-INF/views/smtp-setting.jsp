@@ -5,12 +5,20 @@
 
 
 <div class="bs-example">
-	<form class="form-horizontal" action="success.html" method="post">
+	<form class="form-horizontal" action="smtp-setting.do" method="post">
+		<div>
+			<font color="red">${errorMessage}</font>
+		</div>
+		<div>
+			<font color="green">${successMessage}</font>
+		</div>
+		
 		<div class="form-group">
 			<label for="inputEmail" class="control-label col-xs-2"> SMTP
 				url</label>
 			<div class="col-xs-10">
-				<input type="text" class="form-control" id="url" placeholder="URL">
+				<input type="text" class="form-control" id="url" placeholder="URL"
+					name="SmtpUrl">
 			</div>
 		</div>
 		<div class="form-group">
@@ -18,7 +26,7 @@
 				name</label>
 			<div class="col-xs-10">
 				<input type="text" class="form-control" id="url"
-					placeholder=" smtp name">
+					placeholder=" smtp name" name="SmtpName">
 			</div>
 		</div>
 
@@ -27,7 +35,7 @@
 				SMTP Password</label>
 			<div class="col-xs-10">
 				<input type="password" class="form-control" id="inputPassword"
-					placeholder="Password" required>
+					placeholder="Password" required name="SmtpPassword">
 			</div>
 		</div>
 		<div class="form-group">
@@ -35,7 +43,7 @@
 				port</label>
 			<div class="col-xs-10">
 				<input type="text" class="form-control" id="url"
-					placeholder=" port no">
+					placeholder=" port no" name="SmtpPort">
 			</div>
 		</div>
 
@@ -47,7 +55,7 @@
 		<div class="form-group">
 			<label for="sel1" class="control-label col-xs-2">SSL:</label>
 			<div class="col-xs-10">
-				<select class="form-control" id="sel1">
+				<select class="form-control" id="sel1" name="SmtpSsl">
 					<option>false</option>
 					<option>true</option>
 				</select>
@@ -64,7 +72,7 @@
 				Sender Email</label>
 			<div class="col-xs-10">
 				<input type="email" class="form-control" id="inputEmail"
-					placeholder="Email" required>
+					placeholder="Email" required name="SmtpEmail">
 			</div>
 		</div>
 
