@@ -5,36 +5,41 @@
 
 
 <div class="bs-example">
-	<form class="form-horizontal" action="success.html" method="post">
+	<form class="form-horizontal" action="add-user.do" method="post">
 		<div class="form-group">
-			<label for="inputEmail" class="control-label col-xs-2"> First
+									<div>
+							<font color="red">${errorMessage}</font>
+							</div>
+
+			<label for="inputEmail" name="name" class="control-label col-xs-2"> First
 				name</label>
 			<div class="col-xs-10">
-				<input type="text" class="form-control" id="url" placeholder="URL">
+				<input type="text" class="form-control" id="url" placeholder="First Name" name = "firstname">
 			</div>
 		</div>
 		<div class="form-group">
 			<label for="inputEmail" class="control-label col-xs-2"> last
 				name </label>
 			<div class="col-xs-10">
-				<input type="text" class="form-control" id="url"
-					placeholder=" smtp name">
+				<input type="text" class="form-control" id="url" name ="lastname"
+					placeholder=" Last Name">
 			</div>
 		</div>
 
 		<div class="form-group">
-			<label for="inputEmail" class="control-label col-xs-2"> Email</label>
+			<label for="inputEmail"  class="control-label col-xs-2"> Email</label>
 			<div class="col-xs-10">
-				<input type="email" class="form-control" id="inputEmail"
+				<input type="email"  class="form-control" id="inputEmail" name="email"
 					placeholder="Email" required>
 			</div>
 		</div>
+		
 
 
 		<div class="form-group">
 			<label for="sel1" class="control-label col-xs-2">role:</label>
 			<div class="col-xs-10">
-				<select class="form-control" id="sel1">
+				<select class="form-control" id="sel1" name ="role">
 					<option>user</option>
 					<option>super</option>
 				</select>
@@ -46,7 +51,7 @@
 			<label for="inputPassword" class="control-label col-xs-2">
 				Password</label>
 			<div class="col-xs-10">
-				<input type="password" class="form-control" id="inputPassword"
+				<input type="password" class="form-control" id="inputPassword" name = "password" 
 					placeholder="Password" required>
 			</div>
 		</div>

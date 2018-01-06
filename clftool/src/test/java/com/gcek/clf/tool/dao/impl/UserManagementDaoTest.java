@@ -10,14 +10,14 @@ import com.gcek.clf.tool.utility.BusinessException;
 
 public class UserManagementDaoTest {
 
-	@Ignore
+	
 	@Test
 	public void adduserTest() {
 		System.out.println("shree");
 
 		UserManagementDao u = new UserManagementDaoImpl();
 
-		User user = new User("pavanpawar@gmail.com", "saurabh", "pawar", "admin", "admin");
+		User user = new User("pavanpawarqa@gmail.com", "saurabh", "pawar", "admin", "admin");
 		try {
 			user.setModifiedBy("saurabh");
 			u.addUser(user);
