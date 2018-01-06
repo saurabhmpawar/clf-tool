@@ -1,7 +1,6 @@
 package com.gcek.clf.tool.utility;
 
 import java.util.Base64;
-import java.util.Scanner;
 
 import javax.crypto.Cipher;
 import javax.crypto.spec.IvParameterSpec;
@@ -69,7 +68,5 @@ public class AESEncryption {
 		}
 		return decryptedText;
 	}
-
-	
 
 }

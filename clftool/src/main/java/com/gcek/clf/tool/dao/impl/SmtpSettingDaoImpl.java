@@ -64,7 +64,7 @@ public class SmtpSettingDaoImpl implements SmtpSettingDao {
 			ps.addBatch();
 
 			int[] results = ps.executeBatch();
-
+			logger.info("date saved successfully "+results);
 			con.close();
 			ps.close();
 		} catch (SQLException e) {

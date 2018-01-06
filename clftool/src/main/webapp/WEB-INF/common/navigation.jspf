@@ -50,7 +50,7 @@
 						<li><a href="list-users.do">User management</a></li>
 						<li><a href="smtp-setting.do">SMTP</a></li>
 						<li><a href="Schedular_Display.html">Schedular Display</a></li>
-						<li><a href="Amazon_cridentials.html">Amazon cridentials</a></li>
+						<li><a href="aws-setting.do">Amazon cridentials</a></li>
 					</ul></li>
 
 
