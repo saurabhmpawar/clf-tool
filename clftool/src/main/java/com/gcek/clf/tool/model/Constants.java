@@ -16,4 +16,7 @@ public class Constants {
 	public static final String SECERT_KEY_XXX = "secret_key_xxx";
 	public static final int AWS_KEY_ID = 2;
 
+	// Table field
+	public static final String SETTING_KEY = "setting_key";
+	public static final String SETTING_VALUE = "setting_value";
 }

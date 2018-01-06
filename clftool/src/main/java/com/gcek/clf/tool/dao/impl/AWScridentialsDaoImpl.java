@@ -2,6 +2,7 @@ package com.gcek.clf.tool.dao.impl;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 
 import org.apache.log4j.Logger;
@@ -27,7 +28,7 @@ public class AWScridentialsDaoImpl implements AWSCrientialsDao {
 			ps = (PreparedStatement) con.prepareStatement(sql);
 			ps.setInt(1, Constants.AWS_KEY_ID);
 			ps.setString(2, Constants.ACCESS_KEY);
-			ps.setString(3, AESEncryption.encrypt( awScridentials.getAccessKey()));
+			ps.setString(3, AESEncryption.encrypt(awScridentials.getAccessKey()));
 
 			ps.addBatch();
 
@@ -69,8 +70,38 @@ public class AWScridentialsDaoImpl implements AWSCrientialsDao {
 
 	@Override
 	public AWScridentials getCridentials(int id) throws BusinessException {
-		// TODO Auto-generated method stub
-		return null;
+
+		AWScridentials awScridentials = new AWScridentials();
+
+		Connection con = DBConnect.getConnecttion();
+		String sql = "select * from cft_setting where id= " + id;
+		PreparedStatement ps = null;
+		try {
+			ps = con.prepareStatement(sql);
+			ResultSet rs = ps.executeQuery();
+			while (rs.next()) {
+				if (rs.getString(Constants.SETTING_KEY).equals(Constants.ACCESS_KEY)) {
+					awScridentials.setAccessKey(rs.getString(Constants.SETTING_VALUE));
+				}
+				if (rs.getString(Constants.SETTING_KEY).equals(Constants.SECRET_KEY)) {
+					awScridentials.setSecretKey(rs.getString(Constants.SETTING_VALUE));
+				}
+			}
+
+		} catch (SQLException e) {
+			logger.error(e);
+		} finally {
+			try {
+				con.close();
+
+				if (null != ps)
+					ps.close();
+			} catch (SQLException e) {
+				logger.error("Error while adding account", e);
+
+			}
+		}
+		return awScridentials;
 	}
 
 	@Override
