@@ -40,13 +40,13 @@ public class AWScridentialsDaoImpl implements AWSCrientialsDao {
 			ps.clearParameters();
 			ps.setInt(1, Constants.AWS_KEY_ID);
 			ps.setString(2, Constants.SECERT_KEY_XXX);
-			ps.setString(3, XXXXConverterUtil.generateXXXX(awScridentials.getSecretKeyXXX()));
+			ps.setString(3, XXXXConverterUtil.generateXXXX(awScridentials.getSecretKey()));
 			ps.addBatch();
 
 			ps.clearParameters();
 			ps.setInt(1, Constants.AWS_KEY_ID);
 			ps.setString(2, Constants.ACCESS_KEY_XXX);
-			ps.setString(3, XXXXConverterUtil.generateXXXX(awScridentials.getAccessKeyXXX()));
+			ps.setString(3, XXXXConverterUtil.generateXXXX(awScridentials.getAccessKey()));
 			ps.addBatch();
 
 			int[] results = ps.executeBatch();

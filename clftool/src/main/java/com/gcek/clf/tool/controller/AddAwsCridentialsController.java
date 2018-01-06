@@ -36,12 +36,13 @@ public class AddAwsCridentialsController extends HttpServlet {
 		String accessKey = request.getParameter("accessKey");
 		String secretKey = request.getParameter("secertKey");
 
-		LOGGER.info("Smtpurl " + accessKey + ", SmtpName " + secretKey);
+		LOGGER.info("accessKey " + accessKey + ", secertKey " + secretKey);
 		AWSCrientialsDao dao = new AWScridentialsDaoImpl();
 
 		AWScridentials awScridentials = new AWScridentials(accessKey, secretKey);
 
 		try {
+			
 			dao.addCridentails(awScridentials);
 
 			request.setAttribute("successMessage", "recoard saved ");
