@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 08, 2018 at 05:55 AM
+-- Generation Time: Jan 08, 2018 at 06:58 AM
 -- Server version: 5.7.14
 -- PHP Version: 5.6.25
 
@@ -19,6 +19,8 @@ SET time_zone = "+00:00";
 --
 -- Database: `cfltool`
 --
+CREATE DATABASE IF NOT EXISTS `cfltool` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
+USE `cfltool`;
 
 -- --------------------------------------------------------
 
