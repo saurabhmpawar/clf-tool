@@ -21,6 +21,9 @@ public class SmtpSetting {
 	}
 
 	public SmtpSetting() {
+		
+		
+		
 	}
 
 	public String getSmtpUrl() {
@@ -70,5 +73,13 @@ public class SmtpSetting {
 	public void setSmtpSsl(String smtpSsl) {
 		this.smtpSsl = smtpSsl;
 	}
+
+	@Override
+	public String toString() {
+		return "SmtpSetting [smtpUrl=" + smtpUrl + ", smtpName=" + smtpName + ", smtpPassword=" + smtpPassword
+				+ ", smtpSenderEmail=" + smtpSenderEmail + ", smtpPort=" + smtpPort + ", smtpSsl=" + smtpSsl + "]";
+	}
+	
+	
 
 }
