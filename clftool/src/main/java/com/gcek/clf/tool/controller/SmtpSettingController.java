@@ -26,6 +26,17 @@ public class SmtpSettingController extends HttpServlet {
 			throws ServletException, IOException {
 
 		LOGGER.info("----inside SmtpSettingController----");
+		SmtpSettingDao dao = new SmtpSettingDaoImpl();
+
+		try {
+
+			request.setAttribute("smtpSettings", dao.getAllSmtp().toString());
+
+			LOGGER.info("----data----");
+		} catch (BusinessException e) {
+
+			e.printStackTrace();
+		}
 		request.getRequestDispatcher("/WEB-INF/views/smtp-setting.jsp").forward(request, response);
 
 	}
@@ -51,7 +62,31 @@ public class SmtpSettingController extends HttpServlet {
 			request.setAttribute("successMessage", "recoard saved ");
 			request.getRequestDispatcher("/WEB-INF/views/smtp-setting.jsp").forward(request, response);
 
-		} catch (BusinessException e) {
+			// Smtp details show to URL textfield
+			SmtpSettingDao smtp = new SmtpSettingDaoImpl();
+
+			// @Override
+			// public void createSmtpSetting(SmtpSetting smtpSetting) throws
+			// BusinessException {
+			// TODO Auto-generated method stub
+
+			// @Override
+			// public List<SmtpSetting> getAllSmtp() throws BusinessException {
+			// TODO Auto-generated method stub
+			// return SmtpSetting;
+			// }
+
+			// };
+			try {
+				request.setAttribute("smtpList", smtp.getAllSmtp());
+			} catch (BusinessException e) {
+
+				LOGGER.error("Error while listing users", e);
+			}
+
+		} catch (
+
+		BusinessException e) {
 			LOGGER.error("error at SMTP setting:", e);
 			request.setAttribute("errorMessage", e.getCause());
 			request.getRequestDispatcher("/WEB-INF/views/smtp-setting.jsp").forward(request, response);

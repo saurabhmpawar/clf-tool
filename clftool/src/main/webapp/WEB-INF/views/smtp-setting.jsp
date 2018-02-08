@@ -83,6 +83,16 @@
 		</div>
 
 	</form>
+	
+	<c:forEach items="${smtpSettings}" var="smtp">
+
+							<tr>
+								<td>${smtp}a</td>
+								
+							</tr>
+
+						</c:forEach>
+	
 </div>
 
 
