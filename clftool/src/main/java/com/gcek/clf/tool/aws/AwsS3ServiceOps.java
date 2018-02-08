@@ -2,7 +2,7 @@ package com.gcek.clf.tool.aws;
 
 import java.util.List;
 
-import com.amazonaws.services.s3.model.Bucket;
+import com.gcek.clf.tool.model.MyBucket;
 import com.gcek.clf.tool.utility.BusinessException;
 
 public interface AwsS3ServiceOps {
@@ -12,5 +12,5 @@ public interface AwsS3ServiceOps {
 	 * @return
 	 * @throws BusinessException
 	 */
-	public List<Bucket> listAccountBuckets() throws BusinessException;
+	public List<MyBucket> listAccountBuckets() throws BusinessException;
 }

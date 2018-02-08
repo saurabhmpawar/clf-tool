@@ -18,14 +18,14 @@ public class AWSClientGenerator {
 			AWScridentials awScridentials;
 
 			awScridentials = dao.getCridentials(Constants.AWS_KEY_ID);
-
+			
 			BasicAWSCredentials awsCreds = new BasicAWSCredentials(AESEncryption.decrypt(awScridentials.getAccessKey()),
 					AESEncryption.decrypt(awScridentials.getSecretKey()));
 			return AmazonS3ClientBuilder.standard()
 					.withCredentials(new AWSStaticCredentialsProvider(awsCreds)).build();
 			
 		} catch (BusinessException e) {
-
+			e.printStackTrace();
 		}
 		return null;
 	}

@@ -18,7 +18,7 @@
 						<tr>
 							<th>Bucket Name</th>
 							<th>created on</th>
-							<th>size</th>
+							<th>Permission</th>
 
 						</tr>
 					</thead>
@@ -28,7 +28,7 @@
 							<tr>
 								<td>${bucket.name}a</td>
 								<td>${bucket.creationDate}</td>
-								<td>${bucket.owner}</td>
+								<td>${bucket.identifier}</td>
 							</tr>
 
 						</c:forEach>
