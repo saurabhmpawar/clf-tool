@@ -10,20 +10,22 @@ import javax.servlet.http.HttpServletResponse;
 
 import org.apache.log4j.Logger;
 
-@WebServlet(urlPatterns = "/Security_Groups_Specified_Ports.do")
-public class SecurityGroupsSpecifiedPortsController extends HttpServlet {
+@WebServlet(urlPatterns = "/IAM_use.do")
+public class IamUserController extends HttpServlet {
+
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
-	public static final Logger LOGGER = Logger.getLogger(SecurityGroupsSpecifiedPortsController.class);
-
+	public static final Logger LOGGER = Logger.getLogger(IamUserController.class);
+	
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 
-		LOGGER.info("----inside SecurityGroupsSpecifiedPorts----");
-		request.getRequestDispatcher("/WEB-INF/views/Security_Groups_Specified_Ports.jsp").forward(request, response);
+		LOGGER.info("----inside IamUserController----");
+		request.getRequestDispatcher("/WEB-INF/views/IAM_use.jsp").forward(request, response);
 
 	}
+
 }

@@ -29,7 +29,7 @@
 					<ul class="dropdown-menu">
 						<li><a href="Security_Groups_Specified_Ports.do">Security
 								Groups Specified Ports</a></li>
-						<li><a href="IAM_use.html">IAM use</a></li>
+						<li><a href="IAM_use.do">IAM use</a></li>
 						<li><a href="aws-s3-buck-list.do">s3 bucket
 								permission</a></li>
 						<li><a href="Amazon_ublic_snapshot.html">Amazon ublic
