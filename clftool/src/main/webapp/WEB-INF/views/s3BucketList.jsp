@@ -26,7 +26,7 @@
 						<c:forEach items="${bucketList}" var="bucket">
 
 							<tr>
-								<td>${bucket.name}a</td>
+								<td>${bucket.name}</td>
 								<td>${bucket.creationDate}</td>
 								<td>${bucket.identifier}</td>
 							</tr>
