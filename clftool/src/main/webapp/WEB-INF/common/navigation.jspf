@@ -27,7 +27,7 @@
 				<li class="dropdown active"><a class="dropdown-toggle"
 					data-toggle="dropdown" href="#">Security <span class="caret"></span></a>
 					<ul class="dropdown-menu">
-						<li><a href="Security_Groups_Specified_Ports.html">Security
+						<li><a href="Security_Groups_Specified_Ports.do">Security
 								Groups Specified Ports</a></li>
 						<li><a href="IAM_use.html">IAM use</a></li>
 						<li><a href="aws-s3-buck-list.do">s3 bucket
