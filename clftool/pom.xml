@@ -10,6 +10,8 @@
 	<description>Government College of Engineering, Karad .BE IT Projct	</description>
 
 	<dependencies>
+
+
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
@@ -89,7 +91,7 @@
 			<version>1.11.97</version>
 		</dependency>
 
-	<!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-log4j12 -->
+		<!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-log4j12 -->
 		<dependency>
 			<groupId>org.slf4j</groupId>
 			<artifactId>slf4j-log4j12</artifactId>
@@ -128,6 +130,20 @@
 			<artifactId>jta</artifactId>
 			<version>1.1</version>
 		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/com.sun.faces/jsf-api -->
+		<dependency>
+			<groupId>com.sun.faces</groupId>
+			<artifactId>jsf-api</artifactId>
+			<version>2.2.16</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.sun.faces</groupId>
+			<artifactId>jsf-impl</artifactId>
+			<version>2.2.16</version>
+		</dependency>
+
 	</dependencies>
 
 
