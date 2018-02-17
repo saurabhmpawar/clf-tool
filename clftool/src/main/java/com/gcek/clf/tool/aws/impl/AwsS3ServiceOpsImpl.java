@@ -29,7 +29,7 @@ public class AwsS3ServiceOpsImpl implements AwsS3ServiceOps {
 				AccessControlList acl = s3.getBucketAcl(b.getName());
 				List<Grant> grants = acl.getGrantsAsList();
 				String identifier = "NA";
-				String permision = "NA";
+				
 				for (Grant grant : grants) {
 					identifier += " " + grant.getGrantee().getIdentifier() + " : " + grant.getPermission().toString();
 					System.out.format("  %s: %s\n", grant.getGrantee().getIdentifier(),
@@ -46,6 +46,8 @@ public class AwsS3ServiceOpsImpl implements AwsS3ServiceOps {
 			mybucketList.add(bucket);
 		}
 
+		
+		
 		return mybucketList;
 	}
 

@@ -14,12 +14,11 @@ import com.amazonaws.services.simpleemail.model.SendEmailRequest;
 public class SESEmailSender {
 	 // Replace sender@example.com with your "From" address.
 	  // This address must be verified with Amazon SES.
-	  static final String FROM = "";
+	  static final String FROM = "saurabhpawar1396@gmail.com";
 
 	  // Replace recipient@example.com with a "To" address. If your account
 	  // is still in the sandbox, this address must be verified.
-	  static final String TO = "";
-
+	  static final String TO = "hrishikeshmahajan007@gmail.com";
 	  // The configuration set to use for this email. If you do not want to use a
 	  // configuration set, comment the following variable and the 
 	  // .withConfigurationSetName(CONFIGSET); argument below.
@@ -35,7 +34,7 @@ public class SESEmailSender {
 	      + "AWS SDK for Java</a>";
 
 	  // The email body for recipients with non-HTML email clients.
-	  static final String TEXTBODY = "This email was sent through Amazon SES "
+	  static final String TEXTBODY = "This email was sent through CLF Tool  "
 	      + "using the AWS SDK for Java.";
 
 	  public static void main(String[] args) throws IOException {
