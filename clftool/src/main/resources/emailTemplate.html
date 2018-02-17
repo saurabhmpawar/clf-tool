@@ -1,0 +1,185 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<title></title>
+
+<style type="text/css">
+</style>
+</head>
+<body style="margin: 0; padding: 0; background-color: #F2F2F2;">
+	<center>
+		<h1>Cloud HouseKeeping Tool</h1>
+
+		<table width="100%" border="0" cellpadding="5" cellspacing="0"
+			bgcolor="#F2F2F2">
+			<tr>
+
+				<td align="center" valign="top">
+					<h2>Azure Cloud</h2>
+				</td>
+			</tr>
+		</table>
+		<table width="100%" border="0" cellpadding="10" cellspacing="0"
+			bgcolor="#F2F2F2">
+			<tr>
+				<td align="center" valign="top">Azure VM Details
+					<table width="100%" border="1" cellpadding="5" cellspacing="0"
+						bgcolor="#F2F2F2">
+						<tr>
+							<td>Total Instances</td>
+							<td>:Azure_total_vm</td>
+						</tr>
+
+						<tr>
+							<td>Running Instances</td>
+							<td>:Azure_running_vm</td>
+						</tr>
+
+						<tr>
+							<td>Stopped Instances</td>
+							<td>:Azure_stopped_vm</td>
+						</tr>
+
+					</table>
+
+				</td>
+				<td align="center" valign="top">Azure Disk Details
+					<table width="100%" border="1" cellpadding="5" cellspacing="0"
+						bgcolor="#F2F2F2">
+						<tr>
+							<td>Total Unattached Disk Volumes Count</td>
+							<td>:Azure_total_avalable_disk_count</td>
+						</tr>
+
+						<tr>
+							<td>Total Unattached Disk Volumes Size</td>
+							<td>:Azure_total_avalable_disk_size</td>
+						</tr>
+
+						<tr>
+							<td bgcolor="#ffff4d">Projected monthly cost saving (if resources run for 30 days)</td>
+							<td bgcolor="#ffff4d">:Azure_projected_disk_cost_saving</td>
+						</tr>
+
+					</table>
+				</td>
+				<td align="center" valign="top">Azure Blobs Storage Details
+					<table width="100%" border="1" cellpadding="5" cellspacing="0"
+						bgcolor="#F2F2F2">
+						<tr>
+							<td>Total Blob Count</td>
+							<td>:Azure_total_blob_count</td>
+						</tr>
+
+						<tr>
+							<td>Total Blob Size</td>
+							<td>:Azure_total_blob_size</td>
+						</tr>
+
+						<tr>
+							<td bgcolor="#ffff4d">Projected monthly cost saving (if resources run for 30 days)</td>
+							<td bgcolor="#ffff4d">:Azure_projected_blob_cost_saving</td>
+						</tr>
+
+					</table>
+				</td>
+
+
+			</tr>
+		</table>
+
+		<table width="100%" border="0" cellpadding="0" cellspacing="0"
+			bgcolor="#F2F2F2">
+			<tr>
+
+				<td align="center" valign="top">
+					<h2>Amazon Web services Cloud</h2>
+				</td>
+			</tr>
+		</table>
+		<table width="100%" border="0" cellpadding="10" cellspacing="0"
+			bgcolor="#F2F2F2">
+			<tr>
+				<td align="center" valign="top">AWS Instance Details
+					<table width="100%" border="1" cellpadding="5" cellspacing="0"
+						bgcolor="#F2F2F2">
+						<tr>
+							<td>Total Instances</td>
+							<td>:Aws_total_instance_count</td>
+						</tr>
+
+						<tr>
+							<td>Running Instances</td>
+							<td>:Aws_running_instance_count</td>
+						</tr>
+
+						<tr>
+							<td>Stopped Instances</td>
+							<td>:Aws_stopped_instance_count</td>
+						</tr>
+
+					</table>
+
+				</td>
+				<td align="center" valign="top">AWS Available EBS Volumes
+					<table width="100%" border="1" cellpadding="5" cellspacing="0"
+						bgcolor="#F2F2F2">
+						<tr>
+							<td>Total unattached EBS Volumes Count</td>
+							<td>:Aws_avalable_EBS_volume_count</td>
+						</tr>
+
+						<tr>
+							<td>Total unattached EBS Volumes Size</td>
+							<td>:Aws_avalable_EBS_volume_size</td>
+						</tr>
+
+						<tr>
+							<td bgcolor="#ffff4d">Projected monthly cost saving (if resources run for 30 days)</td>
+							<td bgcolor="#ffff4d">:Aws_EBS_projected_cost_saving</td>
+						</tr>
+
+					</table>
+				</td>
+
+
+
+			</tr>
+		</table>
+		<table width="100%" border="0" cellpadding="0" cellspacing="0"
+			bgcolor="#F2F2F2">
+			<tr>
+
+				<td align="center" valign="top">
+					<h2>Vmware Local Data center</h2>
+				</td>
+			</tr>
+		</table>
+		<table width="100%" border="1" cellpadding="5" cellspacing="0"
+			bgcolor="#F2F2F2">
+			<tr>
+				<td>Server Name</td>
+				<td>zombi vmdk count</td>
+			</tr>
+
+			<tr>
+				<td>:hiperv_server_name</td>
+				<td>:zombiVmdk_files</td>
+			</tr>
+		</table>
+		<h3>
+			 please check detailed report at http://raasqa13.vxindia.veritas.com 
+		</h3>
+
+
+
+	</center>
+	
+	<p>
+	Note: This report is generated at  <b> :reportTime </b></p>
+</body>
+</html>

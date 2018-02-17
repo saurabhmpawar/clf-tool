@@ -10,6 +10,7 @@ import com.gcek.clf.tool.utility.BusinessException;
 
 public class UserManagementDaoTest {
 
+	@Ignore
 	@Test
 	public void adduserTest() {
 		System.out.println("shree");
