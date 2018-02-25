@@ -10,19 +10,19 @@ import javax.faces.bean.SessionScoped;
 import javax.faces.context.FacesContext;
 import javax.servlet.ServletContext;
 
-import org.quartz.JobKey;
+/*import org.quartz.JobKey;
 import org.quartz.Scheduler;
 import org.quartz.SchedulerException;
 import org.quartz.Trigger;
 import org.quartz.ee.servlet.QuartzInitializerListener;
 import org.quartz.impl.StdSchedulerFactory;
-import org.quartz.impl.matchers.GroupMatcher;
+import org.quartz.impl.matchers.GroupMatcher;*/
 
 @ManagedBean(name = "scheduler")
 @SessionScoped
 public class SchedulerBean implements Serializable {
 
-	private static final long serialVersionUID = 1L;
+/*	private static final long serialVersionUID = 1L;
 
 	private Scheduler scheduler;
 
@@ -113,6 +113,6 @@ public class SchedulerBean implements Serializable {
 			this.nextFireTime = nextFireTime;
 		}
 
-	}
+	}*/
 
 }

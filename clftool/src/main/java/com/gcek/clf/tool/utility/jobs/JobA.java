@@ -1,5 +1,5 @@
 package com.gcek.clf.tool.utility.jobs;
-
+/*
 import java.util.Date;
 
 import org.apache.log4j.Logger;
@@ -18,4 +18,4 @@ public class JobA implements Job {
 			LOGGER.info("Job A  update blob storage is completed at " + new Date());
 	}
 
-}
+}*/

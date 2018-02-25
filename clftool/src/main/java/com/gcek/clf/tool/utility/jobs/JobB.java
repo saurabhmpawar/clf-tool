@@ -1,5 +1,5 @@
 package com.gcek.clf.tool.utility.jobs;
-
+/*
 import java.util.Date;
 
 import org.apache.log4j.Logger;
@@ -11,7 +11,7 @@ import org.quartz.JobExecutionException;
  * @author Pavan.Pawar
  *
  *	This is every day job run at 10 a.m
- */
+ *//*
 public class JobB implements Job {
 	static final Logger LOGGER = Logger.getLogger(JobB.class);
 
@@ -33,4 +33,4 @@ public class JobB implements Job {
 		LOGGER.info("Job sending home page report is completed at " + new Date());
 	}
 
-}
+}*/
