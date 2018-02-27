@@ -7,6 +7,7 @@ import com.amazonaws.services.ec2.AmazonEC2;
 import com.amazonaws.services.ec2.model.Address;
 import com.amazonaws.services.ec2.model.DescribeSecurityGroupsResult;
 import com.amazonaws.services.ec2.model.SecurityGroup;
+import com.amazonaws.services.ec2.model.Volume;
 import com.gcek.clf.tool.aws.AwsEC2ServiceOps;
 import com.gcek.clf.tool.model.MySecurityGroup;
 import com.gcek.clf.tool.utility.AWSClientGenerator;
@@ -45,6 +46,12 @@ public class AwsEc2ServiceOpsImpl implements AwsEC2ServiceOps {
 	public List<Address> getPublicIp() throws BusinessException {
 		AmazonEC2 ec2 = AWSClientGenerator.getAWSEc2Client();		
 		return ec2.describeAddresses().getAddresses();
+	}
+
+	@Override
+	public List<Volume> getEbsInfo() throws BusinessException {
+		AmazonEC2 ec2 = AWSClientGenerator.getAWSEc2Client();			
+		return ec2.describeVolumes().getVolumes();
 	}
 
 	
