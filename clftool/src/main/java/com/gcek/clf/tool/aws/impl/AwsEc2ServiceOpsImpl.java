@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.amazonaws.services.ec2.AmazonEC2;
+import com.amazonaws.services.ec2.model.AllocateAddressRequest;
 import com.amazonaws.services.ec2.model.DescribeSecurityGroupsResult;
 import com.amazonaws.services.ec2.model.SecurityGroup;
 import com.gcek.clf.tool.aws.AwsEC2ServiceOps;
@@ -40,5 +41,10 @@ public class AwsEc2ServiceOpsImpl implements AwsEC2ServiceOps {
 		return mySecurityGroups;
 	}
 
+	@Override
+	public List<AllocateAddressRequest> getRequests() throws BusinessException {
+		// TODO Auto-generated method stub
+		return null;
+	}
 }
 	
