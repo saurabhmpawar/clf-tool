@@ -50,6 +50,7 @@ public class AwsEc2ServiceOpsImpl implements AwsEC2ServiceOps {
 
 	@Override
 	public List<Volume> getEbsInfo() throws BusinessException {
+		
 		AmazonEC2 ec2 = AWSClientGenerator.getAWSEc2Client();			
 		return ec2.describeVolumes().getVolumes();
 	}

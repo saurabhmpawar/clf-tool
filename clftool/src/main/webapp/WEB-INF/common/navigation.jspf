@@ -32,6 +32,7 @@
 						<li><a href="aws-s3-buck-list.do">s3 bucket permission</a></li>
 						<li><a href="Amazon_ublic_snapshot.do">Amazon public
 								snapshot</a></li>
+						<li><a href="aws-vpc-list.do">VPC List</a></li>
 					</ul></li>
 
 
