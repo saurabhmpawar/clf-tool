@@ -15,7 +15,7 @@
 					<th>Size</th>
 					<th>CreateTime</th>
 					<th>State</th>
-					<th>Cost saving ($0.05) per gb per month</th>
+					<th>Cost saving per gb per month</th>
 
 				</tr>
 			</thead>

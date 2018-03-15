@@ -13,13 +13,13 @@
 				<li><a href="dashboard.do">Home</a></li>
 
 				<li class="dropdown"><a class="dropdown-toggle"
-					data-toggle="dropdown" href="#">Cost Optimizaton <span
+					data-toggle="dropdown" href="#">Cost Optimization <span
 						class="caret"></span></a>
 					<ul class="dropdown-menu">
 						<li><a href="LowUtilizedInstances.do">Low Utilized
 								instances</a></li>
 						<li><a href="undrUtilizedEbs.do">Underutilized EBS volume</a></li>
-						<li><a href="UnutiliaedIpAddresses.do">Unutiliaed IP
+						<li><a href="UnutiliaedIpAddresses.do">Underutilized IP
 								addresses</a></li>
 					</ul></li>
 
@@ -28,27 +28,27 @@
 					<ul class="dropdown-menu">
 						<li><a href="Security_Groups_Specified_Ports.do">Security
 								Groups Specified Ports</a></li>
-						<li><a href="IAM_use.do">IAM use</a></li>
-						<li><a href="aws-s3-buck-list.do">s3 bucket permission</a></li>
+						<li><a href="IAM_use.do">IAM users</a></li>
+						<li><a href="aws-s3-buck-list.do">s3 bucket permissions</a></li>
 						<li><a href="Amazon_ublic_snapshot.do">Amazon public
-								snapshot</a></li>
+								snapshots</a></li>
 					</ul></li>
 
 
-				<li class="dropdown" ><a class="dropdown-toggle"
+				<!--  <li class="dropdown" ><a class="dropdown-toggle"
 					data-toggle="dropdown" href="#">Performance<span class="caret"></span></a>
 					<ul class="dropdown-menu">
 						<li><a href="HighUtilizationInstances.do">High
 								Utilization Instances</a></li>
-					</ul></li>
+					</ul></li>  -->
 
 				<li class="dropdown"><a class="dropdown-toggle"
-					data-toggle="dropdown" href="#">Setting <span class="caret"></span></a>
+					data-toggle="dropdown" href="#">Settings <span class="caret"></span></a>
 					<ul class="dropdown-menu">
 						<li><a href="list-users.do">User management</a></li>
 						<li><a href="smtp-setting.do">SMTP</a></li>
-						<li><a href="SchedularDisplay.do">Schedular Display</a></li>
-						<li><a href="aws-setting.do">Amazon Cridentials</a></li>
+						<li><a href="SchedularDisplay.do">Scheduler Display</a></li>
+						<li><a href="aws-setting.do">Amazon Credentials</a></li>
 					</ul></li>
 
 
@@ -62,8 +62,8 @@
 
 
 			<ul class="nav navbar-nav navbar-right">
-				<li><a href="#"><span class="glyphicon glyphicon-log-in"></span>
-						Login Out</a></li>
+				<li><a href="login.do"><span class="glyphicon glyphicon-log-in"></span>
+						Logout</a></li>
 			</ul>
 		</div>
 	</div>

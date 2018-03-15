@@ -42,7 +42,7 @@ public class LoginController extends HttpServlet {
 		LOGGER.debug("----user tried to login----" + name);
 
 		// TODO make database connection and try to validate with database
-		if (name.equalsIgnoreCase("saurabhpawar1396@gmial.com") && password.equals("admin@123")) {
+		if (name.equalsIgnoreCase("saurabhpawar1396@gmail.com") && password.equals("admin@123")) {
 
 			request.getRequestDispatcher("/WEB-INF/views/home.jsp").forward(request, response);
 
