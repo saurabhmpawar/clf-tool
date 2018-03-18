@@ -18,7 +18,7 @@ import com.gcek.clf.tool.utility.AWSClientGenerator;
 import com.gcek.clf.tool.utility.BusinessException;
 
 public class AwsEc2ServiceOpsImplTest {
-	@Ignore
+
 	@Test
 	public void testEc2() {
 		System.out.println("shree");
@@ -45,7 +45,6 @@ public class AwsEc2ServiceOpsImplTest {
 		}
 	}
 
-	@Ignore
 	@Test
 	public void testMysecurityGroup() {
 		AwsEC2ServiceOps s = new AwsEc2ServiceOpsImpl();
@@ -65,16 +64,11 @@ public class AwsEc2ServiceOpsImplTest {
 
 		DescribeAddressesResult response = ec2.describeAddresses();
 
-		for(Address address : response.getAddresses()) {
-		    System.out.printf(
-		            "Found address with public IP %s, " +
-		            "domain %s, " +
-		            "allocation id %s " + 
-		            "and NIC id %s",
-		            address.getPublicIp(),
-		            address.getDomain(),
-		            address.getAllocationId(),
-		            address.getNetworkInterfaceId());
+		for (Address address : response.getAddresses()) {
+			System.out.printf(
+					"Found address with public IP %s, " + "domain %s, " + "allocation id %s " + "and NIC id %s",
+					address.getPublicIp(), address.getDomain(), address.getAllocationId(),
+					address.getNetworkInterfaceId());
 		}
 	}
 }

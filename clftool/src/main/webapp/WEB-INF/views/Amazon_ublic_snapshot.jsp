@@ -2,5 +2,5 @@
 <%@ include file="../common/navigation.jspf"%>
 
 
-TBD Amazon_ublic_snapshot users
+TBD Amazon_public_snapshot users
 <%@ include file="../common/footer.jspf"%>
