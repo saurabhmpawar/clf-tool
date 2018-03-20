@@ -6,7 +6,10 @@ import java.util.List;
 import com.amazonaws.services.ec2.AmazonEC2;
 import com.amazonaws.services.ec2.model.Address;
 import com.amazonaws.services.ec2.model.DescribeSecurityGroupsResult;
+import com.amazonaws.services.ec2.model.DescribeSnapshotsRequest;
+import com.amazonaws.services.ec2.model.Instance;
 import com.amazonaws.services.ec2.model.SecurityGroup;
+import com.amazonaws.services.ec2.model.Snapshot;
 import com.amazonaws.services.ec2.model.Volume;
 import com.gcek.clf.tool.aws.AwsEC2ServiceOps;
 import com.gcek.clf.tool.model.MySecurityGroup;
@@ -21,40 +24,50 @@ public class AwsEc2ServiceOpsImpl implements AwsEC2ServiceOps {
 
 		// call ec2 client
 		AmazonEC2 ec2 = AWSClientGenerator.getAWSEc2Client();
-		
-		DescribeSecurityGroupsResult  result=	ec2.describeSecurityGroups();
-		List<SecurityGroup>  securityGroups =result.getSecurityGroups();
-		for (SecurityGroup securityGroup :securityGroups)
-		{
+
+		DescribeSecurityGroupsResult result = ec2.describeSecurityGroups();
+		List<SecurityGroup> securityGroups = result.getSecurityGroups();
+		for (SecurityGroup securityGroup : securityGroups) {
 			MySecurityGroup mySecurityGroup = new MySecurityGroup();
-			//TODO main logic
+			// TODO main logic
 			mySecurityGroup.setColor("RED");
 			mySecurityGroup.setDescription(securityGroup.getDescription());
 			mySecurityGroup.setGroupId(securityGroup.getGroupId());
 			mySecurityGroup.setGroupName(securityGroup.getGroupName());
 			mySecurityGroup.setIpPermissions(securityGroup.getIpPermissions());
-			
-			
-			
+
 			mySecurityGroups.add(mySecurityGroup);
 		}
-		
+
 		return mySecurityGroups;
 	}
 
 	@Override
 	public List<Address> getPublicIp() throws BusinessException {
-		AmazonEC2 ec2 = AWSClientGenerator.getAWSEc2Client();		
+		AmazonEC2 ec2 = AWSClientGenerator.getAWSEc2Client();
 		return ec2.describeAddresses().getAddresses();
 	}
 
 	@Override
 	public List<Volume> getEbsInfo() throws BusinessException {
-		
-		AmazonEC2 ec2 = AWSClientGenerator.getAWSEc2Client();			
+
+		AmazonEC2 ec2 = AWSClientGenerator.getAWSEc2Client();
 		return ec2.describeVolumes().getVolumes();
 	}
 
-	
+	@Override
+	public List<Snapshot> getAllSnapshot() throws BusinessException {
+		AmazonEC2 ec2 = AWSClientGenerator.getAWSEc2Client();
+		
+		DescribeSnapshotsRequest req = new DescribeSnapshotsRequest().withOwnerIds("686263021012");
+		return ec2.describeSnapshots(req).getSnapshots();
+	}
+
+	@Override
+	public List<Instance> getAllEc2Instances() throws BusinessException {
+		AmazonEC2 ec2 = AWSClientGenerator.getAWSEc2Client();
+
+		return ec2.describeInstances().getReservations().get(0).getInstances();
+	}
+
 }
-	
