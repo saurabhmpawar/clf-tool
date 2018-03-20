@@ -85,15 +85,12 @@ public class SmtpSettingDaoImpl implements SmtpSettingDao {
 
 	@Override
 	public List<SmtpSetting> getAllSmtp() throws BusinessException {
-		// TODO Auto-generated method stub
 		logger.info("----inside getallsmtp----");
 
 		List<SmtpSetting> smtpList = new ArrayList<>();
-
-		// TODO open connction
-
 		Connection con = DBConnect.getConnecttion();
 		String sql = "select * from cft_setting where id = 1";
+		SmtpSetting smtp = new SmtpSetting();
 
 		PreparedStatement ps = null;
 		try {
@@ -101,17 +98,21 @@ public class SmtpSettingDaoImpl implements SmtpSettingDao {
 			ResultSet rs = ps.executeQuery();
 			while (rs.next()) {
 
-				SmtpSetting smtp = new SmtpSetting();
 				String key = rs.getString("setting_key");
 				if (key.equalsIgnoreCase(Constants.SMTP_URL)) {
 					smtp.setSmtpUrl(rs.getString("setting_value"));
-				}
-				if (key.equalsIgnoreCase(Constants.SMTP_NAME)) {
+				} else if (key.equalsIgnoreCase(Constants.SMTP_NAME)) {
 					smtp.setSmtpName(rs.getString("setting_value"));
+				} else if (key.equalsIgnoreCase(Constants.SMTP_PORT)) {
+					smtp.setSmtpPort(rs.getString("setting_value"));
+				} else if (key.equalsIgnoreCase(Constants.SMTP_SENDER_SMAIL)) {
+					smtp.setSmtpSenderEmail(rs.getString("setting_value"));
+				} else if (key.equalsIgnoreCase(Constants.SMTP_SSL)) {
+					smtp.setSmtpSsl(rs.getString("setting_value"));
 				}
 
-				smtpList.add(smtp);
 			}
+			smtpList.add(smtp);
 
 			logger.info("----inside getallsmtp-db exit---");
 			con.close();

@@ -6,6 +6,8 @@ import com.amazonaws.auth.AWSStaticCredentialsProvider;
 import com.amazonaws.auth.BasicAWSCredentials;
 import com.amazonaws.services.ec2.AmazonEC2;
 import com.amazonaws.services.ec2.AmazonEC2ClientBuilder;
+import com.amazonaws.services.identitymanagement.AmazonIdentityManagement;
+import com.amazonaws.services.identitymanagement.AmazonIdentityManagementClientBuilder;
 import com.amazonaws.services.s3.AmazonS3;
 import com.amazonaws.services.s3.AmazonS3ClientBuilder;
 import com.gcek.clf.tool.dao.AWSCrientialsDao;
@@ -66,4 +68,22 @@ public class AWSClientGenerator {
 		return null;
 	}
 
+	/**
+	 * IAM client
+	 * 
+	 * @return
+	 */
+	public static AmazonIdentityManagement getAwsIAMClient() {
+		try {
+
+			BasicAWSCredentials awsCreds = getAWSCridentialsFromDB();
+
+			return AmazonIdentityManagementClientBuilder.standard()
+					.withCredentials(new AWSStaticCredentialsProvider(awsCreds)).build();
+		} catch (BusinessException e) {
+			LOGGER.error("Error while getting ec2 client ", e);
+		}
+		return null;
+
+	}
 }

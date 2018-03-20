@@ -83,19 +83,46 @@
 		</div>
 
 	</form>
-	
-	<c:forEach items="${smtpSettings}" var="smtp">
-
-							<tr>
-								<td>${smtp}a</td>
-								
-							</tr>
-
-						</c:forEach>
-	
-</div>
 
 
 
 
-<%@ include file="../common/footer.jspf"%>
+	<!-- /.panel-heading -->
+	<div class="panel-body">
+		<div class="table-responsive">
+			<table class="table table-striped table-bordered table-hover">
+				<thead>
+					<tr>
+						<th>Smtp server Url</th>
+						<th>Smtp Name</th>
+						<th>Smtp SenderEmail</th>
+						<th>Smtp Port</th>
+						<th>Smtp SSL</th>
+					</tr>
+				</thead>
+				<tbody>
+					<c:forEach items="${smtpSettings}" var="smtp">
+
+
+						<tr>
+							<td>${smtp.smtpUrl}</td>
+							<td>${smtp.smtpName}</td>
+							<td>${smtp.smtpSenderEmail}</td>
+							<td>${smtp.smtpPort}</td>
+							<td>${smtp.smtpSsl}</td>
+
+
+						</tr>
+
+					</c:forEach>
+				</tbody>
+			</table>
+		</div>
+		<!-- /.table-responsive -->
+
+	</div>
+
+
+
+
+	<%@ include file="../common/footer.jspf"%>

@@ -30,7 +30,7 @@ public class SmtpSettingController extends HttpServlet {
 
 		try {
 
-			request.setAttribute("smtpSettings", dao.getAllSmtp().toString());
+			request.setAttribute("smtpSettings", dao.getAllSmtp());
 
 			LOGGER.info("----data----");
 		} catch (BusinessException e) {
