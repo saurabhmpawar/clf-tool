@@ -3,7 +3,6 @@
 
 
 
-<a href="add-user.do" class="btn btn-info" role="button">ADD USER </a>
 <div class="col-lg-12">
 	<div class="panel panel-default">
 		<div class="panel-heading">IAM User details
@@ -32,6 +31,8 @@
 						</c:forEach>
 					</tbody>
 				</table>
+				<center> <a href="add-user.do" class="btn btn-info"  role="button" style="padding-bottom:15px" >ADD USER </a></center>
+				
 			</div>
 			<!-- /.table-responsive -->
 		</div>
@@ -43,5 +44,5 @@
 
 
 
-todo table
+
 <%@ include file="../common/footer.jspf"%>

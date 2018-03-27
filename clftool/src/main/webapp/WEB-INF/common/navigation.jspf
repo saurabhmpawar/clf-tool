@@ -32,7 +32,7 @@
 						<li><a href="aws-s3-buck-list.do">s3 bucket permissions</a></li>
 						<li><a href="Amazon_ublic_snapshot.do">Amazon public
 								snapshots</a></li>
-						<li><a href="aws-vpc-list.do">VPC List</a></li>
+					<!--	<li><a href="aws-vpc-list.do">VPC List</a></li> -->
 					</ul></li>
 
 
@@ -48,7 +48,7 @@
 					<ul class="dropdown-menu">
 						<li><a href="list-users.do">User management</a></li>
 						<li><a href="smtp-setting.do">SMTP</a></li>
-						<li><a href="SchedularDisplay.do">Scheduler Display</a></li>
+						<!--<li><a href="SchedularDisplay.do">Scheduler Display</a></li>  -->
 						<li><a href="aws-setting.do">Amazon Credentials</a></li>
 					</ul></li>
 

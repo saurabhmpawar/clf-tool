@@ -120,13 +120,15 @@
 		</div>
 		<!-- /.table-responsive -->
 
-<div class="input-group">
-  <input type="text" class="form-control">
-  <span class="input-group-btn">
-    <button class="btn btn-default" type="button">Test Email</button>
-  </span>
+		<form class="form-horizontal" action="sendmail.do" method="post">
+			<div class="input-group">
+				<input type="text" class="form-control" name="toemail"> <span
+					class="input-group-btn">
+					<button type="submit" class="btn btn-default" >Test Email</button>
+				</span>
 
-</div>
+			</div>
+		</form>
 	</div>
 
 
