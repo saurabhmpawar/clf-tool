@@ -120,7 +120,15 @@
 		</div>
 		<!-- /.table-responsive -->
 
+<div class="input-group">
+  <input type="text" class="form-control">
+  <span class="input-group-btn">
+    <button class="btn btn-default" type="button">Test Email</button>
+  </span>
+
+</div>
 	</div>
+
 
 
 
