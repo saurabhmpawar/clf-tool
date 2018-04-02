@@ -1,6 +1,11 @@
 package com.gcek.clf.tool.controller;
 
 import java.io.IOException;
+import java.util.Date;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Map.Entry;
+import java.util.Set;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -36,15 +41,19 @@ public class SendMailController extends HttpServlet {
 		String toemail = request.getParameter("toemail");
 		String sub = request.getParameter("subject");
 
-		LOGGER.info("to " + toemail + ", subject " + sub );
+		LOGGER.info("to " + toemail + ", subject " + sub);
 
 		try {
 
 			AwsSESServiceOps ops = new AwsSESServiceOpsImpl();
 			String from = "saurabhpawar1396@gmail.com";
-		
+
 			String subject = "This is sampl report of CFL tool";
 			String body = "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\" \"http://www.w3.org/TR/html4/loose.dtd\"> <html lang=\"en\"> <head> <meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\"> <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"> <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\"> <title></title> <style type=\"text/css\"> </style> </head> <body style=\"margin: 0; padding: 0; background-color: #F2F2F2;\"> <center> <h1>CLF Tool</h1> <table width=\"100%\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" bgcolor=\"#F2F2F2\"> <tr> <td align=\"center\" valign=\"top\"> <h2>Amazon Web services Cloud</h2> </td> </tr> </table> <table width=\"100%\" border=\"0\" cellpadding=\"10\" cellspacing=\"0\" bgcolor=\"#F2F2F2\"> <tr> <td align=\"center\" valign=\"top\">AWS Instance Details <table width=\"100%\" border=\"1\" cellpadding=\"5\" cellspacing=\"0\" bgcolor=\"#F2F2F2\"> <tr> <td>Total Instances</td> <td>:Aws_total_instance_count</td> </tr> <tr> <td>Running Instances</td> <td>:Aws_running_instance_count</td> </tr> <tr> <td>Stopped Instances</td> <td>:Aws_stopped_instance_count</td> </tr> </table> </td> <td align=\"center\" valign=\"top\">AWS Available EBS Volumes <table width=\"100%\" border=\"1\" cellpadding=\"5\" cellspacing=\"0\" bgcolor=\"#F2F2F2\"> <tr> <td>Total unattached EBS Volumes Count</td> <td>:Aws_avalable_EBS_volume_count</td> </tr> <tr> <td>Total unattached EBS Volumes Size</td> <td>:Aws_avalable_EBS_volume_size</td> </tr> <tr> <td bgcolor=\"#ffff4d\">Projected monthly cost saving (if resources run for 30 days)</td> <td bgcolor=\"#ffff4d\">:Aws_EBS_projected_cost_saving</td> </tr> </table> </td> </tr> </table> <h3> please check detailed report at http://localhost:82/clftool </h3> </center> <p> Note: This report is generated at <b> :reportTime </b></p> </body> </html>";
+
+			// todo body -- replce value
+
+			String outputSting = readEmailFromHtml(body, gethomepageReportMap());
 			ops.sendMail(from, toemail, subject, body);
 			request.setAttribute("successMessage", "email sent ");
 			request.getRequestDispatcher("/WEB-INF/views/success.jsp").forward(request, response);
@@ -56,6 +65,43 @@ public class SendMailController extends HttpServlet {
 
 		}
 
+	}
+
+	private Map<String, String> gethomepageReportMap() {
+
+		Map<String, String> input = new HashMap<>();
+
+		/// :reportTime
+		input.put(":reportTime", "" + new Date());
+		// :Aws_avalable_EBS_volume_size
+
+		input.put(":Aws_avalable_EBS_volume_count", "3");
+
+		// :Aws_avalable_EBS_volume_count
+		input.put(":Aws_avalable_EBS_volume_count", "3");
+
+		// :Aws_running_instance_count
+		input.put(":Aws_running_instance_count", "0");
+		// :Aws_total_instance_count
+		input.put(":Aws_total_instance_count", "1");
+		// :Aws_EBS_projected_cost_saving
+		input.put(":Aws_EBS_projected_cost_saving", "1.5");
+		return input;
+	}
+
+	// Method to replace the values for keys
+	public static String readEmailFromHtml(String msg, Map<String, String> input) throws BusinessException {
+
+		try {
+			Set<Entry<String, String>> entries = input.entrySet();
+			for (Map.Entry<String, String> entry : entries) {
+				msg = msg.replace(entry.getKey().trim(), entry.getValue().trim());
+			}
+		} catch (Exception exception) {
+			LOGGER.error("Error at readEmailFromHtml ", exception);
+			throw new BusinessException("Error while reading file", exception);
+		}
+		return msg;
 	}
 
 }
